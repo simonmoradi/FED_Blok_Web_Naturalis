@@ -1,0 +1,308 @@
+body {
+    width: 100%;
+    margin: 0;
+    font-family: platform,arial,sans-serif;
+}
+
+main {
+    width: 100%;
+    position: absolute;
+    top: 320px;
+}
+
+section {
+    overflow: hidden;   
+}
+
+section:nth-of-type(8){
+    background-color: #01A050;
+}
+
+form {
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+    background-color: lightgray;
+    color: black;
+    padding: 1em;
+
+}
+
+input[type=text] {
+    padding: 0.5em;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+  }
+
+ul {
+    list-style-type: none;
+}
+
+
+p {
+    line-height: 1.5em;
+    padding: 2em;
+    padding-left: 10%;
+    font-size: 18px;
+}
+
+header a {
+    background-image: none;
+}
+
+a {
+    padding: 1em;
+    padding-left: 10%;
+    padding-right: 6em;
+    text-decoration: none;
+    color: black;
+    background-image: url(../images/link_naar_tickets.png);
+    background-position: 85% 51%;
+    background-size: 4em;
+    background-repeat: no-repeat;
+}
+
+
+li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+}
+
+li p {
+    
+    font-size: 20px;
+    text-align: center;
+}
+
+hr {
+    size: 8;
+    width: 80%;
+    opacity: 20%;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+    color: white;
+    padding-left: 10%;
+    background-image: url(../images/groenebalk_links.png);
+    background-size: 2.5em;
+    background-position: 1% 50%;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    color: white;
+    padding-left: 10%;
+}
+
+h3:nth-of-type(2) {
+    background-image: none;
+}
+
+h3 {
+    background-image: url(../images/groenebalk.png);
+    background-position: 0% 52%;
+    background-size: .9em;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    color: #01A050;
+    font-weight: lighter;
+    line-height: 1em;
+    font-size: x-large;
+    padding-left: 10%;
+    padding-top: 30px;
+}
+
+h5 {
+    background-image: url(../images/link_naar_pagina.png);
+    background-size: 5em;
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    padding-left: 10%;
+    padding-right: 25%;
+    color: white;
+    top: 240px;
+}
+
+h6 {
+    padding-left: 10%;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(70, 63, 63);
+}
+
+a:focus {
+    outline: none;
+    background-color: red;
+    border-color: tomato;
+}
+  
+header img {
+    width: 1em;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+header a img:focus {
+    outline: none;
+    background-color: red;
+    border-color: tomato;
+}
+
+header a img:hover {
+    transform:translatey(-.5em); 
+    cursor:pointer;
+}
+
+  
+section img {
+    width: 100%;    
+}
+
+footer a {
+    display: flex;
+    flex-direction: column;
+    font-family: platform,arial,sans-serif;
+    font-size: 14px;
+    margin-left: 18px;
+    padding: 1em;
+    color: black;
+    background-image: none;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+section:first-of-type {
+    background-color:#F9423A;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    margin: 15px;
+    color: white;
+    background-image: url(../images/flyingbirds.gif);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 110% 120%;
+}
+
+article:first-of-type a img {
+    width: 10%;
+    position: absolute;
+    top: 355px;
+    left: 120px;
+}
+
+.groot {
+    font-size: 1.38em;
+    font-weight: bolder;
+    line-height: 1em;
+}
+
+.linkstylen {
+    display: flex;
+    flex-direction: row;
+    background-image: url(../images/link_naar_tickets.png);
+    background-position: 65% 70%;
+    background-size: 4em;
+    background-repeat: no-repeat;
+    color: rgb(53, 53, 199);
+}
+
+.groengroot {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.hamburgermenu:hover {
+    transform:translatey(-.5em);
+    cursor:pointer;
+}
+
+.hamburgermenu {
+    width: 2em;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    position: fixed;
+    z-index: 10;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    padding: 9px;
+    color:white;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: black;
+}
+
+.next {
+    right: 0;
+}
+
+.groen {
+    background-color: #01A050;
+    color: white;
+    padding-bottom: 40px;
+}
+
+.blauw {
+    background-color: #007DE1;
+    color: white;
+    padding-bottom: 40px;
+}
+
+.zwart {
+    font-size: large;
+    text-transform:capitalize;
+    color: black;
+    font-weight: bold;
+    padding-left: 10%;
+}
+
+.wit {
+    color: white; 
+    background-image: none;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+#gebouw {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: -1;
+    filter: brightness(70%);
+
+}
+
+
+
+
+
+
+
+
