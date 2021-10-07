@@ -1,54 +1,41 @@
+/* algemene styling voor de body */
+/* met width 100% zal de body zich altijd aan de breedte van het scherm aanpassen  */
 body {
     width: 100%;
     margin: 0;
     font-family: platform,arial,sans-serif;
 }
 
+/* zelfde geldt voor de main */
+/* heb hier een position absolute op gezet om deze deels over de header te kunnen plaatsen */
 main {
     width: 100%;
     position: absolute;
-    top: 320px;
+    top: 20em;
 }
 
-section {
+/* hiermee zorg je ervoor dat er geen zichtbare overvloei is */
+article {
     overflow: hidden;   
 }
 
-section:nth-of-type(8){
-    background-color: #01A050;
-}
-
-form {
+/* styling van de lijn tussen de adelaar en plankton */
+hr {
     width: 80%;
-    margin: auto;
-    margin-top: 70px;
-    background-color: lightgray;
-    color: black;
-    padding: 1em;
-
+    opacity: 20%;
 }
 
-input[type=text] {
-    padding: 0.5em;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
-  }
-
+/* hiermee haal je de default styling van een ul weg */
 ul {
     list-style-type: none;
 }
 
-
+/* algemene styling voor paragraph/(brood)tekst */
 p {
     line-height: 1.5em;
+    font-size: 1.125em;
     padding: 2em;
     padding-left: 10%;
-    font-size: 18px;
-}
-
-header a {
-    background-image: none;
 }
 
 a {
@@ -63,27 +50,8 @@ a {
     background-repeat: no-repeat;
 }
 
-
-li {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-
-}
-
-li p {
-    
-    font-size: 20px;
-    text-align: center;
-}
-
-hr {
-    size: 8;
-    width: 80%;
-    opacity: 20%;
-}
-
+/* Door de span die op de h1 staat in de html in de header, kan ik de tekst onder elkaar zetten doormiddel van display flex
+/* waardoor ik geen <br> hoeft te gebruiken. Position absolute zorgt ervoor deze over de afbeelding komt */
 h1 {
     display: flex;
     flex-direction: column;
@@ -91,6 +59,7 @@ h1 {
     top: 150px;
     color: white;
     padding-left: 10%;
+/* de background image is de balk die je aan de linker kant ziet  */
     background-image: url(../images/groenebalk_links.png);
     background-size: 2.5em;
     background-position: 1% 50%;
@@ -102,15 +71,7 @@ h2 {
     padding-left: 10%;
 }
 
-h3:nth-of-type(2) {
-    background-image: none;
-}
-
 h3 {
-    background-image: url(../images/groenebalk.png);
-    background-position: 0% 52%;
-    background-size: .9em;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     color: #01A050;
@@ -119,9 +80,15 @@ h3 {
     font-size: x-large;
     padding-left: 10%;
     padding-top: 30px;
+/* de background image is de balk die je aan de linker kant ziet  */
+    background-image: url(../images/groenebalk.png);
+    background-position: 0% 52%;
+    background-size: .9em;
+    background-repeat: no-repeat;
 }
 
 h5 {
+    /* de background image is de witte pijl naast de tekst van onschatbare ware */
     background-image: url(../images/link_naar_pagina.png);
     background-size: 5em;
     background-position: 95% 50%;
@@ -137,9 +104,17 @@ h6 {
     padding-left: 10%;
 }
 
+footer {
+    background-image: url(../images/eagle-png.png);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 80% 50%;
+}
+
+/* dit zijn verschillende states van de links/a elementen in de html */
 a:hover {
     text-decoration: none;
-    color: rgb(70, 63, 63);
+    color: rgb(122, 108, 108);
 }
 
 a:focus {
@@ -147,36 +122,103 @@ a:focus {
     background-color: red;
     border-color: tomato;
 }
-  
-header img {
+
+
+/* dit is de styling van het kleine formulier onderaan de pagina waar je je kunt inschrijven */
+article form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin: 2em;
+    background: rgb(243, 237, 237);
+    color: black;
+}
+
+/* de styling van de p --> form */
+article form p {
+    margin: 0;
+    padding-left: 10%;
+    line-height: 1em;
+}
+
+/* de styling van de link --> form */
+article form a {
+    font-weight: bolder;
+    padding-left: 10%;
+    color: #01A050;
+    background-position: 55% 51%;
+}
+
+/* dit is de styling van het invoer veld --> form */
+form input[type=email] {
+    margin: auto;
+    width: 80%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* dit is de styling van de verzend knop */
+form input[type=submit] {
+    all: unset;
+    margin-top: 2.4em;
+    background: transparent;
+    padding: 10%;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* logo zonder achtergrond afbeelding */
+header a {
+    background-image: none;
+}
+
+/* styling van de letters op de home page, Naturalis Biodiversity Center */
+header h1 span {
+    font-size: 1.38em;
+    font-weight: bolder;
+    line-height: 1em;
+}
+
+/* logo absoluut gepositioneerd linksboven */
+header a img {
     width: 1em;
     position: absolute;
     left: 10px;
     top: 10px;
 }
 
+/* hier zet ik een focus op het logo als je hierop focust, dus met de tab key navigeert, dan kleurt het logo rood */
 header a img:focus {
     outline: none;
-    background-color: red;
-    border-color: tomato;
+    transform:translatey(-.5em); 
 }
 
+/* als je met je muis */
 header a img:hover {
     transform:translatey(-.5em); 
-    cursor:pointer;
+    cursor: pointer;
 }
 
-  
-section img {
-    width: 100%;    
+ /* hiermee zorg ik ervoor dat elke afbeelding binnenin een article de volledige breedte van het beeldscherm opneemt  */
+article img {
+    width: 100%;
 }
 
+/* hiermee style ik alle linkjes/a elementen binnenin de footer */
 footer a {
     display: flex;
     flex-direction: column;
     font-family: platform,arial,sans-serif;
     font-size: 14px;
     margin-left: 18px;
+    padding-left: 10%;
     padding: 1em;
     color: black;
     background-image: none;
@@ -184,9 +226,27 @@ footer a {
 
 footer p {
     font-weight: bold;
+    padding-left: 10%;
 }
 
-section:first-of-type {
+footer img {
+    width: 100%;
+}
+
+
+/* hiermee selecteer ik de tweede h3 in het html document en kan ik deze apart stylen */
+h3:nth-of-type(2) {
+    background-image: none;
+    font-size: large;
+    text-transform: capitalize;
+    color: black;
+    font-weight: bold;
+    padding-left: 10%;
+}
+
+
+/* Dit is de styling van de eerste section, het rode blok bovenaan de pagina */
+main > article:first-of-type {
     background-color:#F9423A;
     padding-top: 5%;
     padding-bottom: 10%;
@@ -198,48 +258,91 @@ section:first-of-type {
     background-position: 110% 120%;
 }
 
-article:first-of-type a img {
-    width: 10%;
-    position: absolute;
-    top: 355px;
-    left: 120px;
+main > article:nth-of-type(2) {
+    background-image: url(../images/vis.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: 85% 70%;
 }
 
-.groot {
-    font-size: 1.38em;
-    font-weight: bolder;
-    line-height: 1em;
+/* Dit is de styling van het groene artikel onder het kopje leren bij naturalis */
+/* Verder selecteer ik hieronder specifieke articles en elementen daar binnen in om deze te kunnen stylen */
+main > article:nth-of-type(3) {                                                 
+    background-color: #01A050;
+    color: white;
+    padding-bottom: 10%;
+    margin-top: 0;
 }
 
-.linkstylen {
+main > article:nth-of-type(3) > h3 {
+    background-color: white;
+    margin: 0;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-bottom: 20px;
+}
+
+
+main > article:nth-of-type(4) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+main > article:nth-of-type(4) > p {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+}
+
+main > article:nth-of-type(5) {
+    background-color: #007DE1;
+    color: white;
+    padding-bottom: 40px;
+}
+
+main > article:nth-of-type(6) > a:first-of-type {
     display: flex;
     flex-direction: row;
+    color: rgb(53, 53, 199);
+    
     background-image: url(../images/link_naar_tickets.png);
     background-position: 65% 70%;
     background-size: 4em;
     background-repeat: no-repeat;
-    color: rgb(53, 53, 199);
 }
 
-.groengroot {
+main > article:nth-of-type(7) {
+    background-color: #007DE1;
+    color: white;
+    padding-bottom: 40px;
+
+    background-image: url(../images/trex_skeleton.png);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 90% 95%;
+}
+
+main > article:nth-of-type(7) > h3 {
+    color: white; 
+    background-image: none;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+main > article:nth-of-type(8) {
+    background-color: #01A050;
+}
+
+/* dit is telkens het eerste woord, van de h3 en h1 */
+.EersteRegelVetgedrukt {
     font-size: larger;
     font-weight: bolder;
 }
 
-.hamburgermenu:hover {
-    transform:translatey(-.5em);
-    cursor:pointer;
-}
-
-.hamburgermenu {
-    width: 2em;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    position: fixed;
-    z-index: 10;
-}
-
+/* dit zijn de stylings van de slideshow */
 .slideshow-container {
     max-width: 100%;
     position: relative;
@@ -262,47 +365,160 @@ article:first-of-type a img {
     right: 0;
 }
 
-.groen {
-    background-color: #01A050;
-    color: white;
-    padding-bottom: 40px;
-}
-
-.blauw {
-    background-color: #007DE1;
-    color: white;
-    padding-bottom: 40px;
-}
-
-.zwart {
-    font-size: large;
-    text-transform:capitalize;
-    color: black;
-    font-weight: bold;
-    padding-left: 10%;
-}
-
-.wit {
-    color: white; 
-    background-image: none;
-    font-style: italic;
-    font-weight: bolder;
-}
-
-#gebouw {
+#achtergrondafbeelding {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0; 
     z-index: -1;
     filter: brightness(70%);
+}
 
+/* dit is de styling van het eerste artikel op de tickets pagina met zwarte achtergrond */
+#achtergrondkleurZwart {
+    background-color: black;
+    background-image: none;
+}
+
+.geenachtergrondafbeelding {
+    background-image: none;
 }
 
 
+/* hieronder de styling van het hamburgermenu */
+/* dit is de styling van het gehele element, het nav element in de header */
+#menuToggle {
+    display: block;
+    position: relative;
+    z-index: 1;
+    top: 50px;
+    margin: auto;    
+}
 
+/* hamburgermenu styling, het rode block wat uitklapt */
+#menu {
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 20%;
+    padding-bottom: 70%;
 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
+    position: relative;
+    top: -110px;
+    background: #F9423A;
+    list-style-type: none;  
+    
+    transform: translate(0%, -100%); 
+    transition: transform 0.9s;
 
+    
+    background-image:url(../images/trex_skeleton.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 90% 50%;
+}
 
+/* dit is het tweede deel van de navigatie, de grotere letters die onder elkaar staan */
+header nav ul > .anderstylen {
+    padding-top: 20px;
+    padding-right: 50px;
+    font-size: 1.4em;
+}
 
+/* dit is de styling van de link naar tickets in het hamburgermenu, oftwel de button */
+#menu > .tickets {
+    position:absolute;
+    top: 70%;
+    background-color: white;
+    padding: 1em 2em;
+    color: #F9423A;
+    text-align: center;
+    width: 60%;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* dit is de styling van de tekst in het hamburgermenu */
+header nav ul li > a {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.7em;
+}
+
+/* dit is de styling van de a elementen in het menu, dus de tekst */
+#menuToggle a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: rgb(199, 199, 199);
+}
+
+/* dit is de styling van het klik veld, die zorgt ervoor dat er wat gebeurd wanneer je klikt */
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -60px;
+    left: 322px;  
+    cursor: pointer;
+  
+    opacity: 0; /* checkbox verstoppen */
+    z-index: 3; /* hiermee plaats je hem over de steepjes/hamburger zodat er op geklikt kan worden */
+  
+}
+
+/* hamburger menu, dit is de styling van de streepjes */
+#menuToggle span {
+    display: block;
+    position: relative;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;    
+    top: -50px;
+    right: -330px;
+    border-radius: 10px;
+    background: white; 
+     
+    z-index: 2;  
+    transform-origin: 4px 0px;  
+    transition: transform 0.5s;
+}
+
+/* dit is het eerste streepje */
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+/* dit is het tweede streepje */
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* hiermee verander je de streepjes in een kruis, oftewel ze roteren */
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: white;
+}
+
+/* alleen het middelste streepje niet dus moet je laten verstoppen als het ware */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* en de laatste moet in de andere richtig draaien */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menuToggle input:checked ~ ul {
+    transform: none;
+}

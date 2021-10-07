@@ -5,47 +5,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linken van de css stylesheet -->
     <link rel="stylesheet" href="./css/stylesheet.css">
+    <!-- dit zijn de letters die je bovenin je tablad ziet -->
     <title>Naturalis Biodiversity Center</title>
 </head>
 
 <body>
+    <!-- dit is de header met daarin een link naar de homepage, die staat links bovenin het scherm-->
     <header>
-        <a href="https://www.naturalis.nl/">
+        <a href="../Website_Naturalis/index.html">
             <img src="./images/naturalis_logo_wit.png" alt="logo naturalis">
         </a>
+        <!-- dit is het uitklapmenu rechts bovenin het scherm, ook wel bekend als hamburgermenu maar dient als navigatie -->
+            <nav id="menuToggle">
+                <input type="checkbox" />
+                <!-- Dit zijn de drie hamburger streepjes, die ik in de css 1 per 1 style -->
+                <span></span>
+                <span></span>
+                <span></span>
 
-        <nav class="hamburgermenu">
-            <ul>
-                <a href="https://www.naturalis.nl/">
-                    <img src="./images/Hamburger_icon.png" alt="hamburgermenu">
-                </a>
-            </ul>
-        </nav>
+                <ul id="menu">
+                    <li><a href="../Website_Naturalis/index.html">Home</a></li>
+                    <li><a href="../Website_Naturalis/index.html">Doneren</a></li>
+                    <li><a href="../Website_Naturalis/index.html">Nieuws</a></li>
+                    <li><a href="../Website_Naturalis/index.html">Vacatures</a></li>
+                    <li><a href="../Website_Naturalis/index.html">Praktische info</a></li>  
+                    <li><a href="../Website_Naturalis/index.html">Contact</a></li>
 
-        <h1> <span class="groot"> Naturalis</span> Biodiversity Center </h1>
+                    <li class="anderstylen"><a href="../Website_Naturalis/index.html">Museum</a></li>
+                    <li class="anderstylen"><a href="../Website_Naturalis/index.html">Wetenschap</a></li>
+                    <li class="anderstylen"><a href="../Website_Naturalis/index.html">Collectie</a></li>
+                    <li class="anderstylen"><a href="../Website_Naturalis/index.html">Educatie</a></li>
+                    <li class="anderstylen"><a href="../Website_Naturalis/index.html">Over ons</a></li>
+                    <a class="tickets" href="./tickets.html">Tickets</a>  
+                </ul>                    
+            </nav>
+        
+        <!-- Dit is de titel die over de achtergrond afbeelding heen staat, ik heb hier een span op gezet om 
+            deze te kunnne stylen in de CSS -->
+        <h1> <span> Naturalis</span> Biodiversity Center </h1>
         <h5>Al 200 jaar van onschatbare waarde</h5>
-
-        <img id="gebouw" src="./images/Glaskroon_buiten_naturalis.jpg" alt="gebouw van naturalis">
+            <!-- Dit is de achtergrond afbeelding -->
+        <img id="achtergrondafbeelding" src="./images/Glaskroon_buiten_naturalis.jpg" alt="gebouw van naturalis">
     </header>
 
     <main>
+        <!-- dit is het eerste blokje met content, met de rode achtergrond en de link naar de tickets -->
+        <!-- eerste article -->
+        <article>
+            <h2>Bezoek het European Museum of the Year 2021</h2>
+            <p>
+                Vergeet niet voor je bezoek een noodzakelijk ticket met starttijd te reserveren.
+                Ook als je in het bezit van een Museumkaart bent. Tot snel!
+            </p>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Tickets</a>
+        </article>            
 
-        <section>
+        <!-- dit is de tweede article met de groene kop Onderzoek naar de biodiversiteit met daarin een artikel en een slideshow-->
             <article>
-                <h2>Bezoek het European Museum of the Year 2021</h2>
-                <p>
-                    Vergeet niet voor je bezoek een noodzakelijk ticket met starttijd te reserveren.
-                    Ook als je in het bezit van een Museumkaart bent. Tot snel!
-                </p>
-                <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Tickets</a>
-
-            </article>
-        </section>
-
-        <section>
-            <article>
-                <h3> <span class="groengroot"> <b> Onderzoek </b> </span> naar biodiversiteit</h3>
+                <!-- class groengroot een betekenisvollere naam geven, overal -->
+                <h3> <span class="EersteRegelVetgedrukt"> <b> Onderzoek </b> </span> naar biodiversiteit</h3>
                 <p>
                     Naturalis is het nationaal onderzoeksinstituut op het gebied van biodiversiteit. Onze wetenschappers
                     zetten zich dagelijks
@@ -54,6 +74,7 @@
 
                 <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Wetenschap</a>
 
+                <!-- slideshow met twee afbeeldingen van de collectie erin -->
                 <div class="slideshow-container">
                     <div class="mySlides fade">
                         <img src="./images/Trilobite_RGM.1276635_0.jpg" alt="fossiel uit de collectie">
@@ -66,20 +87,18 @@
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
 
-                <h6>Rijkscollectie</h6>
-                <h3 class="zwart">Miljoenen objecten</h3>
+                <!-- Dit is de zwarte H3 onder de slideshow -->
+                <h3>Miljoenen objecten</h3>
 
                 <p>Onze wetenschappelijke verzameling bewaren wij op een plek. Het is de basis voor het onderzoeken en
                     het begrijpen van de wereldwijde biodiversiteit. Een deel ervan zie je terug in het nieuwe museum.
                 </p>
-                <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Collectie</a>
+                <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Collectie</a>                
             </article>
-        </section>
-
-        <section>
-            <h3><span class="groengroot"> <b> Leren </b> </span> bij Naturalis</h3>
-            <article class="groen">
-
+                   
+            <!-- dit is het derde article met groene achtergrond onder de foto van het meisje wat in een net kijkt -->
+            <article>
+                <h3><span class="EersteRegelVetgedrukt"> <b> Leren </b> </span> bij Naturalis</h3>
                 <img src="./images/Kopie_van_MD-NATURALIS-EXPO_EXPEDITIE_038.jpeg" alt="EXPEDITIE">
                 <p>
                     Naturalis is het nationaal onderzoeksinstituut op het gebied van biodiversiteit. Onze wetenschappers
@@ -88,12 +107,14 @@
                 </p>
                 <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Educatie</a>
             </article>
-        </section>
+      
 
-        <section>
+        <!-- dit is de vierde section met de adelaar als foto-->
+            <!-- dit is het vierde article met daarin een H3 en de afbeedlingen met de aantallen van de collectie -->
             <article>
-                <h3><span class="groengroot"> <b> Naturalis</b> </span> Biodiversity Center</h3>
-                <li>
+                <h3><span class="EersteRegelVetgedrukt"> <b> Naturalis</b> </span> Biodiversity Center</h3>
+                <!-- dit is niet goed, list moet ervan af of moet een ol ofzo omheen-->
+               
                     <img src="./images/Bird_eagle-flying.png" alt="vliegende foto">
                     <p>41.976.261 <br>objecten in de collectie</p>
                     <hr>
@@ -102,12 +123,10 @@
                     <hr>
                     <img src="./images/Plant_fern.png" alt="bird flying">
                     <p>111 <br>onderzoekers in dienst</p>
-                </li>
             </article>
-        </section>
 
-        <section>
-            <article class="blauw">
+        <!-- dit is de vijfde article met de blauwe achtergrond-->        
+            <article>
                 <p>
                     Met een unieke combinatie van kennis, talenten en vaardigheden
                     geven wij inhoud aan onze functies als rijksmuseum, academisch onderzoeksinstituut en
@@ -115,36 +134,34 @@
                 </p>
                 <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Over ons</a>
             </article>
-        </section>
+        
 
-        <section>
-
+            <!-- dit is het 6de article -->
             <article>
-                <h3><span class="groengroot"> <b>Expert</b>  </span> in biodiversiteit</h3>
+                <h3><span class="EersteRegelVetgedrukt"> <b>Expert</b>  </span> in biodiversiteit</h3>
                 <img src="./images/Vincent.jpg" alt="onderzoeken">
-                <h3 class="zwart">Nationaal onderzoeksinstituut</h3>
+                <h3>Nationaal onderzoeksinstituut</h3>
                 <p>
                     Naturalis is het nationaal onderzoeksinstituut op het gebied van biodiversiteit. Onze wetenschappers
                     zetten zich dagelijks
                     in voor het beschrijven, begrijpen en behouden van biodiversiteit.
                 </p>
-                <a class="linkstylen" href="https://tickets.naturalis.nl/Exhibitions/Overview">Wetenschappers en onderzoeksgroepen</a>
-
-                <h3><span class="groengroot"><b> Volg </b></span>Onze verhalen</h3>
+                <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Wetenschappers en onderzoeksgroepen</a>
+                
+                <h3><span class="EersteRegelVetgedrukt"><b> Volg </b></span>Onze verhalen</h3>
                 <p>
                     Volg hier het nieuws over het museum en het dagelijkse werk en nieuwe ontdekkingen van onze
                     onderzoekers.
                 </p>
                 <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Nieuws en blogs</a>
-                <img src="./images/social_media_icons.png" alt="">
+                <img src="./images/social_media_icons.png" alt="ga naar social media">
             </article>
-        </section>
 
-        <section>
-
-            <article class="blauw">
+        <!-- dit is de 7de article met de foto dat ze aan tafel zitten -->
+            <!-- de achtergrond kleur van het 7de article is blauw -->
+            <article>
                 <img src="./images/Manifest_Tijd_voor_biodiversiteit7W7A4226-cropped_0.jpg" alt="aan tafel">
-                <p class="witte tekst">21 mei 2021</p>
+                <p>21 mei 2021</p>
                 <h3 class="wit">Jongeren en experts slaan alarm voor biodiversiteit</h3>    
                 <p>
                     Met een unieke combinatie van kennis, talenten en vaardigheden
@@ -153,18 +170,20 @@
                 </p>
                 <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Over ons</a>
             </article>
-        </section>
 
-        <section>
+
+        <!-- Dit is het formulier, onderaan de pagina, waar je je kunt inschrijven -->
+        <article>
+            
             <form>
-                <h4>Houd me op de hoogte</h4>
-                <label for="edit-email">E-mailadres</label><br>
-                <input type="email" id="email" name="email"><br>
-                <input type="submit">
+                <p>Houd me op de hoogte!</p>
+                <input type="email" placeholder="E-mailadres" id="email" name="email">
+                <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Inschrijven</a>
+                <!-- <input type="submit"> -->
             </form>
+        </article>
 
-        </section>
-
+        <!-- hieronder de footer te zien met de linkjes, netjes onder elkaar gezet -->
         <footer>
             <p>Museum</p>
             <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Virtueel museum</a>
@@ -176,27 +195,32 @@
             <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Oude museum</a>
 
             <p>Wetenschap</p>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Virtueel museum</a>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Agenda</a>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Praktische info</a>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Museumzalen</a>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Naturalis museumapp</a>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Congressen en events</a>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Oude museum</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Onderzoekers en specialisten</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Laboratoria</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Onderwijs voor studenten</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">ICT-faciliteiten</a>
 
             <p>Collectie</p>
 
             <p>Educatie</p>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Virtueel museum</a>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Agenda</a>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Praktische info</a>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Museumzalen</a>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Naturalis museumapp</a>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Congressen en events</a>
-            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Oude museum</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Programma's basisonderwijs</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Programma's voortgezet onderwijs</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Boekingsinformatie</a>
 
+            <p>Over ons</p>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">200 jaar Naturalis</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Nieuws</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Vacatures</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Steun Naturalis</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Media</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Congressen en events</a>
+            <a href="https://tickets.naturalis.nl/Exhibitions/Overview">Ons gebouw</a>
+
+            <p>Volg onze verhalen</p>
+            <img src="./images/social_media_icons.png" alt="">
         </footer>
 
+        <!-- het javascript bestand, linken onderin de main -->
         <script src="./js/javascript.js"></script>
 
     </main>
